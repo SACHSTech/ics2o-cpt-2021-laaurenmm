@@ -1,5 +1,5 @@
 """ 
-Hardware Components game
+Hardware Components game CPT
 """
  
 import pygame
