@@ -19,8 +19,6 @@ pygame.init()
 # Set the width and height of the screen [width, height]
 size = (500, 400)
 screen = pygame.display.set_mode(size)
- 
-pygame.display.set_caption("Hardwware components game")
 
 #set up graphics
 background_image = pygame.image.load("Homeimage.jpg").convert()
@@ -98,6 +96,8 @@ rect_height6 = 25
 button_pressed6 = False
 mouse_click_position = [0,0]
 
+
+
 #Loop until the user clicks the close button.
 done = False
 
@@ -128,7 +128,6 @@ while done == False:
           background_image = pygame.image.load("Homeimage.jpg").convert()
         else:
           background_image = pygame.image.load("Homeimage.jpg").convert()
-
 
 #CPU BUTTON PRESS IF STATEMENT
         if (rect_x1 <= mouse_click_position[0] and mouse_click_position[0] <= rect_x1 + rect_width1) and (rect_y1 <= mouse_click_position[1] and mouse_click_position[1] <= rect_y1 + rect_height1):
@@ -270,6 +269,9 @@ while done == False:
         "HOME", True, white)
     screen.blit(text, [450, 20])
 
+    #player image to screen
+    screen.blit(player_image, [player_x, player_y])
+     
     # --- Go ahead and update the screen with what we've drawn.
     pygame.display.flip()
  
